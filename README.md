@@ -23,7 +23,10 @@ To see available options run:
 python lace.py -h
 
 Key options include: 
+
 -e specify input data in Eigenstrat format (i.e. "-e data" implies data.geno, data.snp and data.ind as input files)
+
 -n list of individuals to use as source populations (file, with one ID per line)
+
 -i list of individuals to find ancestry (file, with one ID per line, or comma separated list, or single individual)
 
