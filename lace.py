@@ -198,7 +198,7 @@ def run_for_one_sample(args):
     used_genotype_data_na[used_genotype_data_na>2.0]=np.nan
     used_genotype_frequency=np.nanmean(used_genotype_data_na,axis=1)/2
     used_options["used_genotype_frequency"]=used_genotype_frequency
-        
+
     trans=algorithm.transition( N_samples, options["Ne"], recombinator, data["snp_pos"])
     emiss=algorithm.emission(N_samples, options)
     if options["pseudo_haploid"]:

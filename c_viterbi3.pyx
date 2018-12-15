@@ -210,7 +210,6 @@ class calculator(object):
 
                 thisV[j]=best*em[data[i,s0], data[i,s1], observed[i]]
                 tb_arr[tb_k,j]=best_idx
-                              
                 # If we have demanded that we phase *everything* and site we're going to is not phasable 
                 # then try and find the best informative state. If none of them are informative give up
                 # (but we might phase randomly later)

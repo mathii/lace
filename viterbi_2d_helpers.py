@@ -197,7 +197,8 @@ class pseudohaploid_emission(emission):
                                (2,3,2): lambda z: 0.25+0.75*z,
                                (3,3,0): lambda z: 1-z,
                                (3,3,2): lambda z: z,
-                            }
+                               (3,3,3): lambda z: self.m,
+                                   }
         
     def emission_probability(self, hid, obs, f):
         """ 
@@ -214,10 +215,10 @@ class pseudohaploid_emission(emission):
             raise Exception("Unknown states" + str((obs,hid)))
 
         #cap p by mutation probability
-        if p<self.p:
-            p=self.p
-        elif p>1-self.p:
-            p=1-self.p
+        if p<self.m:
+            p=self.m
+        elif p>1-self.m:
+            p=1-self.m
         
         return p
     

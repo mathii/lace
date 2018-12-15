@@ -23,7 +23,6 @@ from __future__ import division
 import random
 import numpy as np
 from hmmlearn import hmm
-import pdb 
 
 ########################################################################################################## 
 
@@ -43,7 +42,7 @@ def ancestry_n_tracebacks(viterbi_object, sample_indices, snp_pos, options, geno
     ancestries=[[(options["populations"][p1],options["populations"][p2]) for p1,p2 in pars] for pars in parents]
     ancestry=combine_ancestry(ancestries)
     ancestry=smooth_ancestry(ancestry, options, snp_pos)
-    
+
     return {"best_parents":parents[0], "local_ancestry":ancestry}
 
 ########################################################################################################## 
